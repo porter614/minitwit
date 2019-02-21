@@ -2,7 +2,7 @@
 <title>{% block title %}Welcome{% endblock %} | MiniTwit</title>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 <div class="page">
-  <h1>MiniTwit</h1>
+  <h1>John David Nurme Blog</h1>
   <div class="navigation">
   {% if g.user %}
     <a href="{{ url_for('timeline') }}">my timeline</a> |
@@ -27,6 +27,6 @@
   {% block body %}{% endblock %}
   </div>
   <div class="footer">
-    MiniTwit &mdash; A Flask Application
+    JDB &mdash; The official blog for all things JD
   </div>
 </div>

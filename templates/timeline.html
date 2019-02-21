@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 {% block title %}
   {% if request.endpoint == 'public_timeline' %}
-    Public Timeline
+    Post your favorite JD stories here!
   {% elif request.endpoint == 'user_timeline' %}
     {{ profile_user.username }}'s Timeline
   {% else %}
-    My Timeline
+    My Posts about JD
   {% endif %}
 {% endblock %}
 {% block body %}
@@ -27,7 +27,7 @@
       </div>
     {% elif request.endpoint == 'timeline' %}
       <div class="twitbox">
-        <h3>What's on your mind {{ g.user.username }}?</h3>
+        <h3>What's up with that JD guy?? {{ g.user.username }}?</h3>
         <form action="{{ url_for('add_message') }}" method="post">
           <p><input type="text" name="text" size="60"><!--
           --><input type="submit" value="Share">
